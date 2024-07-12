@@ -5,11 +5,12 @@ const passport = require('passport');
 const connectDB = require('./config/db');
 const auth = require('./routes/auth');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
 const app = express();
-
+app.use(cors());
 
 connectDB();
 
